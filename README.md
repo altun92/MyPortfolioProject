@@ -33,3 +33,9 @@ Admin, anasayfadaki bütün alanlar için CRUD (Create, Read, Update, Delete) i�
 - **Dinamik Grafikler:** Yetenek değerleriyle ilgili grafikler, kullanıcıların becerilerini görsel olarak takip edebilmesine olanak tanır.
 
 ## Proje İçerisinden Görüntüler
+![Screenshot_8](https://github.com/user-attachments/assets/63d2220e-ea33-4972-b345-4d4ed37c9cab)
+![Screenshot_9](https://github.com/user-attachments/assets/b94b0311-114f-4622-903f-899c6e8a88e4)
+![Screenshot_7](https://github.com/user-attachments/assets/69197d5b-3b24-481f-8c5c-7b70950d66fa)
+![Screenshot_2](https://github.com/user-attachments/assets/fb96acc0-33a0-4c0a-8571-7f035e2b5f9e)
+![Screenshot_3](https://github.com/user-attachments/assets/eafcaf16-9cf6-4393-89ff-7c6cac9036b4)
+![Screenshot_4](https://github.com/user-attachments/assets/fdfd470b-adf2-4e17-9b31-ee915d787e73)
