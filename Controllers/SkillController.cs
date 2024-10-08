@@ -4,15 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 
 namespace MyPortfolioProject.Controllers
 {
     public class SkillController : Controller
     {
         DbMyPortfolioEntities context = new DbMyPortfolioEntities();
-        public ActionResult SkillList()
+        public ActionResult SkillList(int page = 1)
         {
-            var values = context.Skill.ToList();
+            var values = context.Skill.ToList().ToPagedList(page, 5);
             return View(values);
         }
         [HttpGet] //Attribute-Nitelik

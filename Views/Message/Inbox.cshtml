@@ -3,6 +3,7 @@
     ViewBag.Title = "Inbox";
     Layout = "~/Views/Admin/Index.cshtml";
     int count = 0;
+    string color = "";
 }
 
 <table class="table table-bordered">
@@ -18,6 +19,33 @@
     </tr>
     @foreach (var item in Model)
     {
+        switch (item.Category.CategoryName)
+        {
+            case "Teşekkür": color = "lightblue";
+                break;
+
+            case "Öneri": color = "antiquewhite";
+                break;
+            case "Proje Talebi": color = "lightyellow";
+                break;
+            case "Referans": color = "aquamarine";
+                break;
+            case "Toplantı":
+                color = "lightblue";
+                break;
+            case "Görüşme":
+                color = "lightgreen";
+                break;
+            case "Reklam":
+                color = "cadetblue";
+                break;
+            case "Diğer":
+                color = "lightpink";
+                break;
+            default: color = "darkkhaki";
+                break;
+        }
+
         count++;
 
         <tr>
@@ -27,7 +55,7 @@
             <td>@item.Subject</td>
 
             @if (item.IsRead == false)
-            {
+                                                            {
                 <td><a href="/Message/ChangeMessageStatusToTrue/@item.ContactId" class="btn btn-info">Okundu Olarak İşaretle</a></td>
             }
             else
@@ -35,7 +63,7 @@
                 <td><a href="/Message/ChangeMessageStatusToFalse/@item.ContactId" class="btn btn-danger">Okunmadı Olarak İşaretle</a></td>
             }
 
-            <td>@item.Category.CategoryName</td>
+            <td style="background-color:@color">@item.Category.CategoryName</td>
             <td><a href="#" class="btn btn-warning">Mesajı Aç</a></td>
             <td><a href="#" class="btn btn-danger">Mesajı Sil</a></td>
         </tr>

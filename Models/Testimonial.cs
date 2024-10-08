@@ -12,11 +12,12 @@ namespace MyPortfolioProject.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Feature
+    public partial class Testimonial
     {
-        public int FeatureId { get; set; }
-        public string Title { get; set; }
+        public int TestimonialId { get; set; }
         public string NameSurname { get; set; }
-        public string SubTitle { get; set; }
+        public string City { get; set; }
+        public string Image { get; set; }
+        public string Description { get; set; }
     }
 }

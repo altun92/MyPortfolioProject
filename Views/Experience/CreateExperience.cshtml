@@ -8,15 +8,15 @@
 
 <form method="post">
     <label>Deneyim Başlığı</label>
-    @Html.TextBoxFor(x => x.Title, new {@class="form-control" })
+    @Html.TextBoxFor(x => x.Title, new {@class="form-control", required = "required" })
     <br />
 
     <label>Deneyim Alt Başlığı</label>
-    @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control", required = "required" })
     <br />
 
     <label>Deneyim Açıklaması</label>
-    @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control", required = "required" })
     <br />
 
     <button class="btn btn-primary">Deneyim Oluştur</button>

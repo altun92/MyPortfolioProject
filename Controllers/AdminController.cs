@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MyPortfolioProject.Models;
 
 namespace MyPortfolioProject.Controllers
 {
     public class AdminController : Controller
     {
-        // GET: Admin
-        public ActionResult Index()
+        DbMyPortfolioEntities context = new DbMyPortfolioEntities();
+        public ActionResult DashboardChart()
         {
-            return View();
+            var values = context.Skill.ToList();
+            return View(values);
         }
 
         public PartialViewResult PartialHead()
@@ -21,6 +23,7 @@ namespace MyPortfolioProject.Controllers
 
         public PartialViewResult PartialSidebar()
         {
+            ViewBag.profileImage = context.Profile.Select(x => x.ImageUrl).FirstOrDefault();
             return PartialView();
         }
 

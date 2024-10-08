@@ -1,4 +1,6 @@
-﻿@model List<MyPortfolioProject.Models.Skill>
+﻿@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<MyPortfolioProject.Models.Skill>
 @{
     ViewBag.Title = "SkillList";
     Layout = "~/Views/Admin/Index.cshtml";
@@ -28,3 +30,14 @@
 </table>
 
 <a href="/Skill/CreateSkill" class="btn btn-success">Yeni Yetenek Girişi</a>
+
+<br />
+<br />
+
+@Html.PagedListPager((IPagedList)Model,page=>Url.Action("SkillList", new {page}), new PagedListRenderOptions
+{
+    LiElementClasses= new List<string>
+    {
+        "page-link"
+    }
+})

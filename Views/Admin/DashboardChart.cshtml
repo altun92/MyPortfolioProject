@@ -1,0 +1,34 @@
+﻿﻿@using Newtonsoft.Json;
+@model List<MyPortfolioProject.Models.Skill>
+@{
+    ViewBag.Title = "DashboardChart";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<div>
+    <canvas id="chartskill" width="400" height="200"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('chartskill').getContext('2d');
+    var skillsChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: @Html.Raw(JsonConvert.SerializeObject(Model.Select(s => s.SkillName).ToList())),
+            datasets: [{
+                label: 'Yetenek Değerleri',
+                data: @Html.Raw(JsonConvert.SerializeObject(Model.Select(s => s.Rate).ToList())),
+                backgroundColor: '#36A2EB',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
