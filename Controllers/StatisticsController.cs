@@ -9,7 +9,7 @@ namespace MyPortfolioProject.Controllers
 {
     public class StatisticsController : Controller
     {
-        DbMyPortfolioEntities db = new DbMyPortfolioEntities();
+        DbMyPortfolioEntities2 db = new DbMyPortfolioEntities2();
         public ActionResult Index()
         {
             ViewBag.totalMessageCount = db.Contact.Count();

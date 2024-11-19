@@ -9,7 +9,7 @@ namespace MyPortfolioProject.Controllers
 {
     public class AdminController : Controller
     {
-        DbMyPortfolioEntities context = new DbMyPortfolioEntities();
+        DbMyPortfolioEntities2 context = new DbMyPortfolioEntities2();
         public ActionResult DashboardChart()
         {
             var values = context.Skill.ToList();

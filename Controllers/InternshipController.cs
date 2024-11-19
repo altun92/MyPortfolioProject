@@ -9,7 +9,7 @@ namespace MyPortfolioProject.Controllers
 {
     public class InternshipController : Controller
     {
-        DbMyPortfolioEntities context = new DbMyPortfolioEntities();
+        DbMyPortfolioEntities2 context = new DbMyPortfolioEntities2();
         public ActionResult InternshipList()
         {
             var values = context.Internship.ToList();

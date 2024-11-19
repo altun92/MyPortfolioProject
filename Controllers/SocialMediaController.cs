@@ -9,7 +9,7 @@ namespace MyPortfolioProject.Controllers
 {
     public class SocialMediaController : Controller
     {
-        DbMyPortfolioEntities context = new DbMyPortfolioEntities();
+        DbMyPortfolioEntities2 context = new DbMyPortfolioEntities2();
         public ActionResult SocialMediaList()
         {
             var values = context.SocialMedia.Where(x=>x.Status==true).ToList();

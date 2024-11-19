@@ -10,7 +10,7 @@ namespace MyPortfolioProject.Controllers
 {
     public class ServiceController : Controller
     {
-        DbMyPortfolioEntities context = new DbMyPortfolioEntities();
+        DbMyPortfolioEntities2 context = new DbMyPortfolioEntities2();
         public ActionResult ServiceList()
         {
             var values = context.Service.ToList();

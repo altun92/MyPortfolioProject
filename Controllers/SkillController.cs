@@ -11,7 +11,7 @@ namespace MyPortfolioProject.Controllers
 {
     public class SkillController : Controller
     {
-        DbMyPortfolioEntities context = new DbMyPortfolioEntities();
+        DbMyPortfolioEntities2 context = new DbMyPortfolioEntities2();
         public ActionResult SkillList(int page = 1)
         {
             var values = context.Skill.ToList().ToPagedList(page, 5);

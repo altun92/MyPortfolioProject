@@ -9,7 +9,7 @@ namespace MyPortfolioProject.Controllers
 {
     public class DefaultController : Controller
     {
-        DbMyPortfolioEntities context = new DbMyPortfolioEntities();
+        DbMyPortfolioEntities2 context = new DbMyPortfolioEntities2();
         // GET: Default
         public ActionResult Index()
         {

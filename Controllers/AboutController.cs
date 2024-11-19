@@ -9,7 +9,7 @@ namespace MyPortfolioProject.Controllers
 {
     public class AboutController : Controller
     {
-        DbMyPortfolioEntities context = new DbMyPortfolioEntities();
+        DbMyPortfolioEntities2 context = new DbMyPortfolioEntities2();
         public ActionResult AboutList()
         {
             var values = context.About.ToList();

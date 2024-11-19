@@ -9,7 +9,7 @@ namespace MyPortfolioProject.Controllers
 {
     public class MessageController : Controller
     {
-        DbMyPortfolioEntities context = new DbMyPortfolioEntities();
+        DbMyPortfolioEntities2 context = new DbMyPortfolioEntities2();
         // GET: Message
         public ActionResult Inbox()
         {

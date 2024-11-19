@@ -9,7 +9,7 @@ namespace MyPortfolioProject.Controllers
 {
     public class ContactController : Controller
     {
-        DbMyPortfolioEntities context = new DbMyPortfolioEntities();
+        DbMyPortfolioEntities2 context = new DbMyPortfolioEntities2();
         public PartialViewResult PartialContactSidebar()
         {
             return PartialView();

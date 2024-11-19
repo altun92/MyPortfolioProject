@@ -13,10 +13,10 @@ namespace MyPortfolioProject.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DbMyPortfolioEntities : DbContext
+    public partial class DbMyPortfolioEntities2 : DbContext
     {
-        public DbMyPortfolioEntities()
-            : base("name=DbMyPortfolioEntities")
+        public DbMyPortfolioEntities2()
+            : base("name=DbMyPortfolioEntities2")
         {
         }
     
@@ -26,18 +26,18 @@ namespace MyPortfolioProject.Models
         }
     
         public virtual DbSet<About> About { get; set; }
+        public virtual DbSet<Admin> Admin { get; set; }
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Contact> Contact { get; set; }
         public virtual DbSet<Education> Education { get; set; }
         public virtual DbSet<Experience> Experience { get; set; }
+        public virtual DbSet<Internship> Internship { get; set; }
+        public virtual DbSet<Portfolio> Portfolio { get; set; }
         public virtual DbSet<Profile> Profile { get; set; }
         public virtual DbSet<Service> Service { get; set; }
         public virtual DbSet<Skill> Skill { get; set; }
         public virtual DbSet<SocialMedia> SocialMedia { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<Admin> Admin { get; set; }
-        public virtual DbSet<Portfolio> Portfolio { get; set; }
         public virtual DbSet<Testimonial> Testimonial { get; set; }
-        public virtual DbSet<Internship> Internship { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace MyPortfolioProject.Controllers
 {
     public class EducationController : Controller
     {
-        DbMyPortfolioEntities context = new DbMyPortfolioEntities();
+        DbMyPortfolioEntities2 context = new DbMyPortfolioEntities2();
         public ActionResult EducationList()
         {
             var values = context.Education.ToList();
